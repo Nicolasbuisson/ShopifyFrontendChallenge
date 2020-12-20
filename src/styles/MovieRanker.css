@@ -1,0 +1,11 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+:root {
+  --clr-grey: #353535;
+  --clr-accent: #00bbdd;
+  --clr-gold: #ffd700;
+}
