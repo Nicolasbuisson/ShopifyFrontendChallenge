@@ -33,13 +33,17 @@ export class MovieRanker extends Component {
   }
 
   removeNomination(event) {
-    //event.preventDefault();
-    console.log("removed");
+    let index = this.state.nominatedMovies.indexOf(event.target.value);
+    this.state.nominatedMovies.splice(index, 1);
+    this.setState({ nominatedMovies: this.state.nominatedMovies });
   }
 
   nominateMovie(event) {
-    //event.preventDefault();
-    console.log("nominated");
+    let newNominatedMovies = [
+      ...this.state.nominatedMovies,
+      event.target.value,
+    ];
+    this.setState({ nominatedMovies: newNominatedMovies });
   }
 
   searchMovies() {
@@ -47,8 +51,7 @@ export class MovieRanker extends Component {
   }
 
   render() {
-    this.checkNominatedMoviesSize();
-    console.log(this.state.searchTerm);
+    //this.checkNominatedMoviesSize();
     //this.searchMovies()
     return (
       <div className="container">
@@ -79,6 +82,8 @@ export class MovieRanker extends Component {
                   <button
                     className="foundMovies-list-button"
                     onClick={this.nominateMovie}
+                    value={foundMovie}
+                    disabled={this.state.nominatedMovies.includes(foundMovie)}
                   >
                     Nominate
                   </button>
@@ -103,6 +108,7 @@ export class MovieRanker extends Component {
                   <button
                     className="nominatedMovies-list-button"
                     onClick={this.removeNomination}
+                    value={nominatedMovie}
                   >
                     Remove
                   </button>
