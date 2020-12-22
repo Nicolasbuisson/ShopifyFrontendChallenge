@@ -56,66 +56,71 @@ export class MovieRanker extends Component {
     return (
       <div className="container">
         <h1 className="main-title">The Shoppies</h1>
-        <div className="search-container">
-          <h2>Movies</h2>
-          <div className="search-bar">
-            {/* add search icon */}
-            <input
-              className="search-bar-input"
-              type="text"
-              value={this.state.searchTerm}
-              onChange={this.updateSearchTerm}
-            ></input>
+        <p className="main-para">
+          Choose 5 movies for awards. <strong>You</strong> decide.
+        </p>
+        <div className="grid-container">
+          <div className="search-container">
+            <h2 className="search-subtitle">Movie title</h2>
+            <div className="search-bar">
+              {/* add search icon */}
+              <input
+                className="search-bar-input"
+                type="text"
+                value={this.state.searchTerm}
+                onChange={this.updateSearchTerm}
+              ></input>
+            </div>
           </div>
-        </div>
 
-        <div className="foundMovies-container">
-          <h2>Results for {this.state.searchTerm}</h2>
-          {/** add movie/film icon */}
-          <ul className="foundMovies-list">
-            {this.state.foundMovies.map(
-              //change this part when u add in Backend call
-              (foundMovie) => (
-                // console.log(foundMovie),
-                <li className="foundMovies-list-item">
-                  <div className="foundMovies-list-label">{foundMovie}</div>
-                  <button
-                    className="foundMovies-list-button"
-                    onClick={this.nominateMovie}
-                    value={foundMovie}
-                    disabled={this.state.nominatedMovies.includes(foundMovie)}
-                  >
-                    Nominate
-                  </button>
-                </li>
-              )
-            )}
-          </ul>
-        </div>
+          <div className="foundMovies-container">
+            <h2 className="subtitle">Results for "{this.state.searchTerm}"</h2>
+            {/** add movie/film icon */}
+            <ul className="foundMovies-list">
+              {this.state.foundMovies.map(
+                //change this part when u add in Backend call
+                (foundMovie) => (
+                  // console.log(foundMovie),
+                  <li className="foundMovies-list-item">
+                    <div className="foundMovies-list-label">{foundMovie}</div>
+                    <button
+                      className="foundMovies-list-button"
+                      onClick={this.nominateMovie}
+                      value={foundMovie}
+                      disabled={this.state.nominatedMovies.includes(foundMovie)}
+                    >
+                      Nominate
+                    </button>
+                  </li>
+                )
+              )}
+            </ul>
+          </div>
 
-        <div className="nominatedMovies-container">
-          <h2>Nominated Movies</h2>
-          {/**add trophy/medal icon, gold color */}
-          <ul className="nominatedMovies-list">
-            {this.state.nominatedMovies.map(
-              //change this part when u add in Backend call
-              (nominatedMovie) => (
-                // console.log(nominatedMovie),
-                <li className="nominatedMovies-list-item">
-                  <div className="nominatedMovies-list-item-label">
-                    {nominatedMovie}
-                  </div>
-                  <button
-                    className="nominatedMovies-list-button"
-                    onClick={this.removeNomination}
-                    value={nominatedMovie}
-                  >
-                    Remove
-                  </button>
-                </li>
-              )
-            )}
-          </ul>
+          <div className="nominatedMovies-container">
+            <h2 className="subtitle">Nominations</h2>
+            {/**add trophy/medal icon, gold color */}
+            <ul className="nominatedMovies-list">
+              {this.state.nominatedMovies.map(
+                //change this part when u add in Backend call
+                (nominatedMovie) => (
+                  // console.log(nominatedMovie),
+                  <li className="nominatedMovies-list-item">
+                    <div className="nominatedMovies-list-label">
+                      {nominatedMovie}
+                    </div>
+                    <button
+                      className="nominatedMovies-list-button"
+                      onClick={this.removeNomination}
+                      value={nominatedMovie}
+                    >
+                      Remove
+                    </button>
+                  </li>
+                )
+              )}
+            </ul>
+          </div>
         </div>
       </div>
     );
