@@ -70,6 +70,7 @@
   min-width: 30vw;
   min-height: 33vh;
   padding: 20px;
+  margin: 0 10px;
 }
 
 .nominatedMovies-container {
@@ -88,7 +89,6 @@
 
 .search-bar-input {
   width: 65vw;
-  text-align: center;
 }
 
 /* FOUND / NOMINATED MOVIES SECTION */
@@ -102,7 +102,7 @@
 .nominatedMovies-list-item {
   display: flex;
   flex-direction: row;
-  justify-content: start;
+  justify-content: flex-start;
   margin: 20px 10px;
 }
 

@@ -48,11 +48,24 @@ export class MovieRanker extends Component {
 
   searchMovies() {
     //perform API call
+    let url = "http://www.omdbapi.com/?apikey=7409b0fc&&s=shrek"; //+ this.state.searchTerm; //type=movie
+    console.log(url);
+    fetch(url)
+      .then((response) => {
+        response.json();
+        // console.log(response);
+      })
+      .then((movies) => {
+        console.log("movies: " + movies);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
   }
 
   render() {
     //this.checkNominatedMoviesSize();
-    //this.searchMovies()
+    this.searchMovies();
     return (
       <div className="container">
         <h1 className="main-title">The Shoppies</h1>
