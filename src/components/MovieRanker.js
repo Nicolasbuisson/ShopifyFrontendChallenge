@@ -3,11 +3,8 @@ import "../styles/MovieRanker.css";
 
 const MovieRanker = () => {
   const [searchTerm, setSearchTerm] = useState("");
-  const [foundMovies, setFoundMovies] = useState(["Carribean", "Ursula"]);
-  const [nominatedMovies, setNominatedMovies] = useState([
-    "Pirates of the Carribean",
-    "Shrek",
-  ]);
+  const [foundMovies, setFoundMovies] = useState([]);
+  const [nominatedMovies, setNominatedMovies] = useState([]);
 
   const checkNominatedMoviesSize = () => {
     if (nominatedMovies.length >= 5) {
@@ -58,12 +55,14 @@ const MovieRanker = () => {
       }
       console.log(moviesTitleYear);
       setFoundMovies(moviesTitleYear);
+    } else {
+      setFoundMovies([]);
     }
   };
 
   useEffect(() => {
     searchMovies();
-  });
+  }, [searchTerm]);
 
   return (
     <div className="container">
