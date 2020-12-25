@@ -1,19 +1,14 @@
-import React, { Component, useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import "../styles/MovieRanker.css";
 
 const MovieRanker = () => {
   const [searchTerm, setSearchTerm] = useState("");
   const [foundMovies, setFoundMovies] = useState([]);
   const [nominatedMovies, setNominatedMovies] = useState([]);
+  const [completed, setCompleted] = useState(false);
 
   const checkNominatedMoviesSize = () => {
-    if (nominatedMovies.length >= 5) {
-      alert("Movie Nomination Complete");
-    }
-    /*this works
-    do a "Banner"
-    not sure what this means, a pop-up?
-    a div at the bottom that appears to say it's complete?*/
+    setCompleted(nominatedMovies.length >= 5);
   };
 
   const updateSearchTerm = (event) => {
@@ -64,6 +59,10 @@ const MovieRanker = () => {
     searchMovies();
   }, [searchTerm]);
 
+  useEffect(() => {
+    checkNominatedMoviesSize();
+  }, [nominatedMovies]);
+
   return (
     <div className="container">
       <h1 className="main-title">The Shoppies</h1>
@@ -95,7 +94,7 @@ const MovieRanker = () => {
                   className="foundMovies-list-button"
                   onClick={nominateMovie}
                   value={foundMovie}
-                  disabled={nominatedMovies.includes(foundMovie)}
+                  disabled={nominatedMovies.includes(foundMovie) || completed}
                 >
                   Nominate
                 </button>
@@ -123,6 +122,17 @@ const MovieRanker = () => {
               </li>
             ))}
           </ul>
+        </div>
+        <div
+          className={
+            completed
+              ? "banner-container banner-container-show"
+              : "banner-container"
+          }
+        >
+          <p className="banner-text">
+            Congratulations! You've completed your selection
+          </p>
         </div>
       </div>
     </div>
