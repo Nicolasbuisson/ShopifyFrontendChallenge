@@ -132,3 +132,11 @@
 .foundMovies-list-button:disabled {
   opacity: 0.5;
 }
+
+/* BANNER SECTION */
+
+.banner-text {
+  color: var(--clr-gold);
+  font-size: 20px;
+  font-weight: 600;
+}

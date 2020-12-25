@@ -34,7 +34,6 @@ const MovieRanker = () => {
     let response = await fetch(url);
     let responseJson = await response.json();
 
-    console.log(responseJson.Search);
     let moviesTitleYear = [];
     if (responseJson.Search !== undefined) {
       for (let i = 0; i < responseJson.Search.length; i++) {
@@ -48,7 +47,6 @@ const MovieRanker = () => {
             ")"
         );
       }
-      console.log(moviesTitleYear);
       setFoundMovies(moviesTitleYear);
     } else {
       setFoundMovies([]);
