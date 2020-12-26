@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import "../styles/MovieRanker.css";
 
 const MovieRanker = () => {
+  document.title = "The Shoppies";
   const [searchTerm, setSearchTerm] = useState("");
   const [foundMovies, setFoundMovies] = useState([]);
   const [nominatedMovies, setNominatedMovies] = useState([]);
@@ -65,12 +66,12 @@ const MovieRanker = () => {
     <div className="container">
       <h1 className="main-title">The Shoppies</h1>
       <p className="main-para">
-        Choose 5 movies for awards. <strong>You</strong> decide.
+        Select 5 movies as Nominees. <strong>You</strong> decide.
       </p>
       <div className="grid-container">
         <div className="search-container">
           <div className="search-bar">
-            {/* add search icon */}
+            <div className="icon magnifier"></div>
             <input
               className="search-bar-input"
               type="text"
@@ -82,8 +83,8 @@ const MovieRanker = () => {
         </div>
 
         <div className="foundMovies-container">
+          <div className="icon film"></div>
           <h2 className="subtitle">Results for "{searchTerm}"</h2>
-          {/** add movie/film icon */}
           <ul className="foundMovies-list">
             {foundMovies.map((foundMovie) => (
               <li className="foundMovies-list-item">
@@ -102,8 +103,8 @@ const MovieRanker = () => {
         </div>
 
         <div className="nominatedMovies-container">
+          <div className="icon trophy"></div>
           <h2 className="subtitle">Nominations</h2>
-          {/**add trophy/medal icon, gold color */}
           <ul className="nominatedMovies-list">
             {nominatedMovies.map((nominatedMovie) => (
               <li className="nominatedMovies-list-item">
