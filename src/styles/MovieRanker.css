@@ -17,13 +17,20 @@
 }
 
 /* TYPOGRAPHY */
-/* ADD FONTS */
+
+* {
+  font-family: "Josefin Slab", serif;
+  font-weight: 500;
+}
+
 .main-title {
   padding: 10px 10px;
   margin-bottom: 10px;
   color: var(--clr-gold);
   text-align: center;
   font-size: 3.3rem;
+  font-family: "Niconne", cursive;
+  letter-spacing: 3px;
 }
 
 .main-para {
@@ -31,12 +38,14 @@
   color: var(--clr-gold);
   text-align: center;
   font-size: 1.6rem;
+  font-weight: 600;
 }
 
 .subtitle {
   color: var(--clr-gold);
   font-size: 1.5rem;
   display: inline;
+  font-weight: 600;
 }
 
 /* LAYOUT */
@@ -46,7 +55,7 @@
   background-image: radial-gradient(
     circle,
     var(--clr-gold) 0%,
-    var(--clr-black) 80%
+    var(--clr-black) 60%
   );
 }
 
@@ -75,7 +84,7 @@
   grid-row: 2 / 3;
   background-color: var(--clr-grey);
   width: auto;
-  min-width: 30vw;
+  min-width: 33vw;
   min-height: 48vh;
   padding: 20px;
   margin: 0 10px;
