@@ -1,23 +1,22 @@
 {
   "files": {
-    "main.css": "/ShopifyFrontendChallenge/static/css/main.ab7136cd.chunk.css",
-    "main.js": "/ShopifyFrontendChallenge/static/js/main.c4e83dcb.chunk.js",
-    "main.js.map": "/ShopifyFrontendChallenge/static/js/main.c4e83dcb.chunk.js.map",
-    "runtime-main.js": "/ShopifyFrontendChallenge/static/js/runtime-main.640ba4b6.js",
-    "runtime-main.js.map": "/ShopifyFrontendChallenge/static/js/runtime-main.640ba4b6.js.map",
-    "static/js/2.d9361fa1.chunk.js": "/ShopifyFrontendChallenge/static/js/2.d9361fa1.chunk.js",
-    "static/js/2.d9361fa1.chunk.js.map": "/ShopifyFrontendChallenge/static/js/2.d9361fa1.chunk.js.map",
-    "static/js/3.8ca54252.chunk.js": "/ShopifyFrontendChallenge/static/js/3.8ca54252.chunk.js",
-    "static/js/3.8ca54252.chunk.js.map": "/ShopifyFrontendChallenge/static/js/3.8ca54252.chunk.js.map",
+    "main.css": "/ShopifyFrontendChallenge/static/css/main.d1e34fb5.chunk.css",
+    "main.js": "/ShopifyFrontendChallenge/static/js/main.6c5a6229.chunk.js",
+    "main.js.map": "/ShopifyFrontendChallenge/static/js/main.6c5a6229.chunk.js.map",
+    "runtime-main.js": "/ShopifyFrontendChallenge/static/js/runtime-main.b33fb472.js",
+    "runtime-main.js.map": "/ShopifyFrontendChallenge/static/js/runtime-main.b33fb472.js.map",
+    "static/js/2.dce64eb6.chunk.js": "/ShopifyFrontendChallenge/static/js/2.dce64eb6.chunk.js",
+    "static/js/2.dce64eb6.chunk.js.map": "/ShopifyFrontendChallenge/static/js/2.dce64eb6.chunk.js.map",
+    "static/js/3.2eb30ea0.chunk.js": "/ShopifyFrontendChallenge/static/js/3.2eb30ea0.chunk.js",
+    "static/js/3.2eb30ea0.chunk.js.map": "/ShopifyFrontendChallenge/static/js/3.2eb30ea0.chunk.js.map",
     "index.html": "/ShopifyFrontendChallenge/index.html",
-    "static/css/main.ab7136cd.chunk.css.map": "/ShopifyFrontendChallenge/static/css/main.ab7136cd.chunk.css.map",
-    "static/js/2.d9361fa1.chunk.js.LICENSE.txt": "/ShopifyFrontendChallenge/static/js/2.d9361fa1.chunk.js.LICENSE.txt",
-    "static/media/logo.6ce24c58.svg": "/ShopifyFrontendChallenge/static/media/logo.6ce24c58.svg"
+    "static/css/main.d1e34fb5.chunk.css.map": "/ShopifyFrontendChallenge/static/css/main.d1e34fb5.chunk.css.map",
+    "static/js/2.dce64eb6.chunk.js.LICENSE.txt": "/ShopifyFrontendChallenge/static/js/2.dce64eb6.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.640ba4b6.js",
-    "static/js/2.d9361fa1.chunk.js",
-    "static/css/main.ab7136cd.chunk.css",
-    "static/js/main.c4e83dcb.chunk.js"
+    "static/js/runtime-main.b33fb472.js",
+    "static/js/2.dce64eb6.chunk.js",
+    "static/css/main.d1e34fb5.chunk.css",
+    "static/js/main.6c5a6229.chunk.js"
   ]
 }
