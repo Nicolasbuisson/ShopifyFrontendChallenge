@@ -110,6 +110,7 @@
   border: 1px solid var(--clr-gold);
   margin-top: 10px;
   align-self: center;
+  animation: appear 500ms ease-in-out forwards;
 }
 
 .banner-container-show {
@@ -122,7 +123,7 @@
   height: inherit;
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: left;
   align-items: center;
 }
 
@@ -149,6 +150,29 @@
   flex-direction: row;
   justify-content: flex-start;
   margin: 6px 10px;
+  animation: appear 500ms ease-in-out forwards;
+}
+
+@keyframes appear {
+  0% {
+    opacity: 0;
+  }
+
+  25% {
+    opacity: 0.25;
+  }
+
+  50% {
+    opacity: 0.5;
+  }
+
+  75% {
+    opacity: 0.75;
+  }
+
+  100% {
+    opacity: 1;
+  }
 }
 
 .foundMovies-list-label,
@@ -206,6 +230,5 @@
   height: 24px;
   width: 24px;
   background-image: url(../assets/iconmonstr-magnifier-2-24.png);
-  margin-bottom: 0px;
-  margin-right: 2px;
+  margin: 0px 5px;
 }
