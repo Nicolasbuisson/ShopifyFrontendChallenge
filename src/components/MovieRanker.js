@@ -30,7 +30,7 @@ const MovieRanker = () => {
 
   const searchMovies = async () => {
     let url =
-      "http://www.omdbapi.com/?apikey=7409b0fc&type=movie&s=" + searchTerm;
+      "https://www.omdbapi.com/?apikey=7409b0fc&type=movie&s=" + searchTerm;
 
     let response = await fetch(url);
     let responseJson = await response.json();
