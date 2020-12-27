@@ -66,7 +66,8 @@ const MovieRanker = () => {
     <div className="container">
       <h1 className="main-title">The Shoppies</h1>
       <p className="main-para">
-        Select 5 movies as Nominees. <strong>You</strong> decide.
+        Select 5 movies as Nominees. <strong className="You-term">You</strong>{" "}
+        decide.
       </p>
       <div className="grid-container">
         <div className="search-container">
